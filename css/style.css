@@ -1,0 +1,79 @@
+body {
+    background-image: linear-gradient(rgba(8, 2, 20, 0.902), rgba(17, 2, 22, 0.373)), url(../images/smart-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Alkatra', cursive;
+}
+
+.room-name, .device-name {
+    color: aliceblue;
+}
+
+#rooms {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    width: 220px;
+    background-color: rgba(32, 3, 56, 0.236); 
+    border-color: #a0cfe1;
+    box-shadow: inset 0 0 3px rgb(172, 213, 212);
+    content: "";
+    position: relative;
+}
+
+
+.room-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.room-icon img {
+    height: 50px;
+    width: 50px;
+}
+
+.devices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.device img {
+    height: 30px;
+    width: 30px;
+}
+
+.device-switch {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#tv {
+    cursor: pointer;
+}
+
+.ac-temperature, .sound-system-volume {
+    width: 80px;
+    margin-top: 10px;
+    cursor: pointer;
+}

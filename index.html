@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/smart-icon.png">
+    <link rel="stylesheet" href="css/style.css">
     <title>Smart Home Assistant</title>
 </head>
+
 <body>
+    <div id="rooms">
+        <div class="room" id="bedroom">
+            <div class="room-icon">
+                <img src="images/bedroom.png">
+                <div class="room-name">Bedroom</div>
+            </div>
+            <div class="devices">
+                <div class="device" id="light">
+                    <img src="images/light.png">
+                    <div class="device-name">Light</div>
+                    <button class="device-switch">ON/OFF</button>
+                </div>
+                <div class="device" id="ac">
+                    <img src="images/air-conditioner.png">
+                    <div class="device-name">AC</div>
+                    <button class="device-switch">ON/OFF</button>
+                    <input type="range" min="16" max="30" step="1" value="20" class="ac-temperature">
+                </div>
+            </div>
+        </div>
+        <div class="room" id="living-room">
+            <div class="room-icon">
+                <img src="images/couch.png">
+                <div class="room-name">Living Room</div>
+            </div>
+            <div class="devices">
+                <div class="device" id="tv">
+                    <img src="images/smart-tv.png">
+                    <div id="tv" class="device-name">TV</div>
+                    <button class="device-switch">ON/OFF</button>
+                </div>
+                <div class="device" id="sound-system">
+                    <img src="images/sound-system.png">
+                    <div class="device-name">Sound System</div>
+                    <button class="device-switch">ON/OFF</button>
+                    <input type="range" min="0" max="100" step="1" value="50" class="sound-system-volume">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://kit.fontawesome.com/db47ece932.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
+
 </html>
