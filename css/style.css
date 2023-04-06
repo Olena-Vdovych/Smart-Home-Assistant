@@ -7,7 +7,8 @@ body {
     font-family: 'Alkatra', cursive;
 }
 
-.room-name, .device-name {
+.room-name,
+.device-name {
     color: aliceblue;
 }
 
@@ -25,8 +26,8 @@ body {
     border-radius: 10px;
     padding: 10px;
     width: 220px;
-    background-color: rgba(32, 3, 56, 0.236); 
-    
+    background-color: rgba(32, 3, 56, 0.236);
+
 }
 
 .room:hover {
@@ -69,13 +70,44 @@ body {
 .device-switch {
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.565);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.device-switch:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #ffffffa0;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.device-switch.on:before {
+    transform: translateX(85%);
+    background-color: rgba(255, 0, 0, 0.645);
+}
+
+.device-switch.off:before {
+    transform: translateX(-17%);
+    background-color: rgba(9, 152, 9, 0.773);
 }
 
 #tv {
     cursor: pointer;
 }
 
-.ac-temperature, .sound-system-volume, .jalousie-system {
+.ac-temperature,
+.sound-system-volume,
+.jalousie-system {
     width: 80px;
     margin-top: 10px;
     cursor: pointer;
