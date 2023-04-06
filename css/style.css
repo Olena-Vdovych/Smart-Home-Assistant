@@ -52,7 +52,7 @@ body {
     margin-bottom: 10px;
 }
 
-.room-icon img {
+.room-icon img, #content img {
     height: 50px;
     width: 50px;
 }
