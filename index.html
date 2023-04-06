@@ -11,90 +11,92 @@
 </head>
 
 <body>
-<div class="page container">
-    <div id="rooms">
-        <div class="room" id="bedroom">
-            <div class="room-icon">
-                <img src="images/bedroom.png" alt="bedroom">
-                <div class="room-name">Bedroom</div>
-            </div>
-            <div class="devices">
-                <div class="device" id="light">
-                    <img src="images/light.png" alt="light">
-                    <div class="device-name">Light</div>
-                    <button class="device-switch">ON/OFF</button>
+    <div class="page container">
+        <div id="rooms">
+            <div class="room" id="bedroom">
+                <div class="room-icon">
+                    <img src="images/bedroom.png" alt="bedroom">
+                    <div class="room-name">Bedroom</div>
                 </div>
-                <div class="device" id="ac">
-                    <img src="images/air-conditioner.png" alt="air conditioner">
-                    <div class="device-name">AC</div>
-                    <button class="device-switch">ON/OFF</button>
-                    <input type="range" min="16" max="30" step="1" value="20" class="ac-temperature">
+                <div class="devices">
+                    <div class="device" id="light">
+                        <img src="images/light.png" alt="light">
+                        <div class="device-name">Light</div>
+                        <button class="device-switch">ON/OFF</button>
+                    </div>
+                    <div class="device" id="ac">
+                        <img src="images/air-conditioner.png" alt="air conditioner">
+                        <div class="device-name">AC</div>
+                        <button class="device-switch">ON/OFF</button>
+                        <input type="range" min="16" max="30" step="1" value="20" class="ac-temperature">
+                    </div>
+                </div>
+            </div>
+            <div class="room" id="living-room">
+                <div class="room-icon">
+                    <img src="images/couch.png" alt="living room">
+                    <div class="room-name">Living Room</div>
+                </div>
+                <div class="devices">
+                    <div class="device" id="tv">
+                        <img src="images/smart-tv.png" alt="tv">
+                        <div id="tv-device" class="device-name">TV</div>
+                        <button class="device-switch">ON/OFF</button>
+                    </div>
+                    <div class="device" id="sound-system">
+                        <img src="images/sound-system.png" alt="sound system">
+                        <div class="device-name">Sound System</div>
+                        <button class="device-switch">ON/OFF</button>
+                        <input type="range" min="0" max="100" step="1" value="50" class="sound-system-volume">
+                    </div>
+                </div>
+            </div>
+            <div class="room" id="kitchen">
+                <div class="room-icon">
+                    <img src="images/kitchen.png" alt="kitchen">
+                    <div class="room-name">Kitchen</div>
+                </div>
+                <div class="devices">
+                    <div class="device" id="cooker">
+                        <img src="images/induction-stove.png" alt="cooker">
+                        <div id="cooker-device" class="device-name">Cooker</div>
+                        <button class="device-switch">ON/OFF</button>
+                    </div>
+                    <div class="device" id="jalousie">
+                        <img src="images/smart-blind.png" alt="jalousie">
+                        <div id="jalousie-device" class="device-name">Jalousie</div>
+                        <button class="device-switch">ON/OFF</button>
+                        <input type="range" min="16" max="60" step="1" value="40" class="jalousie-system">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="room" id="living-room">
-            <div class="room-icon">
-                <img src="images/couch.png" alt="living room">
-                <div class="room-name">Living Room</div>
+        <div id="content">
+            <h2 id="security" class="device-name">Alarm</h2>
+            <img src="images/alarm.png" alt="alarm">
+            <p class="status">Status: <span id="security-status">Turn off</span></p>
+            <button class="device-switch">ON/OFF</button>
+
+            <h2 id="lights" class="device-name">Light</h2>
+            <img src="images/idea.png" alt="lights">
+            <p class="status">Status: <span id="lights-status">Turn off</span></p>
+            <button class="device-switch">ON/OFF</button>
+
+            <h2 id="thermostat" class="device-name">Thermoregulation</h2>
+            <img src="images/temperature.png" alt="temperature">
+            <p class="status">Temperature: <span id="temperature">20&deg;C</span></p>
+            <div class="temperature-btn">
+                <button class="increase">Increase</button>
+                <button class="decrease">Decrease</button>
             </div>
-            <div class="devices">
-                <div class="device" id="tv">
-                    <img src="images/smart-tv.png" alt="tv">
-                    <div id="tv-device" class="device-name">TV</div>
-                    <button class="device-switch">ON/OFF</button>
-                </div>
-                <div class="device" id="sound-system">
-                    <img src="images/sound-system.png" alt="sound system">
-                    <div class="device-name">Sound System</div>
-                    <button class="device-switch">ON/OFF</button>
-                    <input type="range" min="0" max="100" step="1" value="50" class="sound-system-volume">
-                </div>
-            </div>
-        </div>
-        <div class="room" id="kitchen">
-            <div class="room-icon">
-                <img src="images/kitchen.png" alt="kitchen">
-                <div class="room-name">Kitchen</div>
-            </div>
-            <div class="devices">
-                <div class="device" id="cooker">
-                    <img src="images/induction-stove.png" alt="cooker">
-                    <div id="cooker-device" class="device-name">Cooker</div>
-                    <button class="device-switch">ON/OFF</button>
-                </div>
-                <div class="device" id="jalousie">
-                    <img src="images/smart-blind.png" alt="jalousie">
-                    <div id="jalousie-device" class="device-name">Jalousie</div>
-                    <button class="device-switch">ON/OFF</button>
-                    <input type="range" min="16" max="60" step="1" value="40" class="jalousie-system">
-                </div>
-            </div>
+
+            <h2 id="appliances" class="device-name">Appliances</h2>
+            <img src="images/electric-appliance.png" alt="appliances">
+            <p class="status">Status: <span id="appliances-status">Turn off</span></p>
+            <button class="device-switch">ON/OFF</button>
         </div>
     </div>
-	<div id="content">
-		<h2 id="security" class="device-name">Alarm</h2>
-        <img src="images/alarm.png" alt="alarm">
-		<p class="status">Status: <span id="security-status">Turn off</span></p>
-		<button class="device-switch">ON/OFF</button>
 
-		<h2 id="lights" class="device-name">Light</h2>
-        <img src="images/idea.png" alt="lights">
-		<p class="status">Status: <span id="lights-status">Turn off</span></p>
-		<button class="device-switch">ON/OFF</button>
-
-		<h2 id="thermostat" class="device-name">Thermoregulation</h2>
-        <img src="images/temperature.png" alt="temperature">
-		<p class="status">Temperature: <span id="temperature">20&deg;C</span></p>
-		<button>Increase</button>
-		<button>Decrease</button>
-
-		<h2 id="appliances" class="device-name">Appliances</h2>
-        <img src="images/electric-appliance.png" alt="appliances">
-		<p class="status">Status: <span id="appliances-status">Turn off</span></p>
-		<button class="device-switch">ON/OFF</button>
-	</div>
-</div>
-    
     <script src="https://kit.fontawesome.com/db47ece932.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>

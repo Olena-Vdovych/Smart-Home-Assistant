@@ -18,6 +18,11 @@ body {
     color: aliceblue;
 }
 
+.room-name,
+.device-name {
+    font-size: 16px;
+}
+
 #rooms {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +45,7 @@ body {
 
 .room:hover {
     border-color: #a0cfe1;
-    box-shadow: inset 0 0 3px rgb(172, 213, 212);
+    box-shadow: 12px 12px 2px rgb(172, 213, 212, 0.2);
     content: "";
     position: relative;
 }
@@ -124,6 +129,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.increase,
+.decrease {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.565);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.temperature-btn {
+    display: inline-flex;
 }
 
 @media (min-width: 768px) {
