@@ -22,12 +22,22 @@
                     <div class="device" id="light">
                         <img src="images/light.png" alt="light">
                         <div class="device-name">Light</div>
-                        <button class="device-switch">ON/OFF</button>
+                        <div class="container-btn">
+                            <div class="toggle light-toggle">
+                                <div class="circle"></div>
+                            </div>
+                            <span class="text">OFF</span>
+                        </div>
                     </div>
                     <div class="device" id="ac">
                         <img src="images/air-conditioner.png" alt="air conditioner">
                         <div class="device-name">AC</div>
-                        <button class="device-switch">ON/OFF</button>
+                        <div class="container-btn">
+                            <div class="toggle conditioner-toggle">
+                                <div class="circle"></div>
+                            </div>
+                            <span class="text">OFF</span>
+                        </div>
                         <input type="range" min="16" max="30" step="1" value="20" class="ac-temperature">
                     </div>
                 </div>
@@ -41,12 +51,22 @@
                     <div class="device" id="tv">
                         <img src="images/smart-tv.png" alt="tv">
                         <div id="tv-device" class="device-name">TV</div>
-                        <button class="device-switch">ON/OFF</button>
+                        <div class="container-btn">
+                            <div class="toggle tv-toggle">
+                                <div class="circle"></div>
+                            </div>
+                            <span class="text">OFF</span>
+                        </div>
                     </div>
                     <div class="device" id="sound-system">
                         <img src="images/sound-system.png" alt="sound system">
                         <div class="device-name">Sound System</div>
-                        <button class="device-switch">ON/OFF</button>
+                        <div class="container-btn">
+                            <div class="toggle sound-toggle">
+                                <div class="circle"></div>
+                            </div>
+                            <span class="text">OFF</span>
+                        </div>
                         <input type="range" min="0" max="100" step="1" value="50" class="sound-system-volume">
                     </div>
                 </div>
@@ -60,40 +80,80 @@
                     <div class="device" id="cooker">
                         <img src="images/induction-stove.png" alt="cooker">
                         <div id="cooker-device" class="device-name">Cooker</div>
-                        <button class="device-switch">ON/OFF</button>
+                        <div class="container-btn">
+                            <div class="toggle cooker-toogle">
+                                <div class="circle"></div>
+                            </div>
+                            <span class="text">OFF</span>
+                        </div>
                     </div>
                     <div class="device" id="jalousie">
                         <img src="images/smart-blind.png" alt="jalousie">
                         <div id="jalousie-device" class="device-name">Jalousie</div>
-                        <button class="device-switch">ON/OFF</button>
+                        <div class="container-btn">
+                            <div class="toggle jalousie-toggle">
+                                <div class="circle"></div>
+                            </div>
+                            <span class="text">OFF</span>
+                        </div>
                         <input type="range" min="16" max="60" step="1" value="40" class="jalousie-system">
                     </div>
                 </div>
             </div>
         </div>
         <div id="content">
-            <h2 id="security" class="device-name">Alarm</h2>
-            <img src="images/alarm.png" alt="alarm">
-            <p class="status">Status: <span id="security-status">Turn off</span></p>
-            <button class="device-switch">ON/OFF</button>
-
-            <h2 id="lights" class="device-name">Light</h2>
-            <img src="images/idea.png" alt="lights">
-            <p class="status">Status: <span id="lights-status">Turn off</span></p>
-            <button class="device-switch">ON/OFF</button>
-
-            <h2 id="thermostat" class="device-name">Thermoregulation</h2>
-            <img src="images/temperature.png" alt="temperature">
-            <p class="status">Temperature: <span id="temperature">20&deg;C</span></p>
-            <div class="temperature-btn">
-                <button class="increase">Increase</button>
-                <button class="decrease">Decrease</button>
+            <div id="security">
+                <h2 class="device-name">Alarm</h2>
+                <img src="images/alarm.png" alt="alarm">
+                <p class="status">Status: <span id="security-status">Turn off</span></p>
+                <div class="container-btn">
+                    <div class="toggle security-toggle">
+                        <div class="circle"></div>
+                    </div>
+                    <span class="text">OFF</span>
+                </div>
             </div>
 
-            <h2 id="appliances" class="device-name">Appliances</h2>
-            <img src="images/electric-appliance.png" alt="appliances">
-            <p class="status">Status: <span id="appliances-status">Turn off</span></p>
-            <button class="device-switch">ON/OFF</button>
+            <div id="lights">
+                <h2 class="device-name">Light</h2>
+                <img src="images/idea.png" alt="lights">
+                <p class="status">Status: <span id="lights-status">Turn off</span></p>
+                <div class="container-btn">
+                    <div class="toggle lights-toggle">
+                        <div class="circle"></div>
+                    </div>
+                    <span class="text">OFF</span>
+                </div>
+            </div>
+
+            <div id="thermostat">
+                <h2 class="device-name">Thermoregulation</h2>
+                <img src="images/temperature.png" alt="temperature">
+                <div class="thermostat">
+                    <div class="dial"></div>
+                    <div class="temperature-display">
+                        <div class="optimal-temperature">
+                            Optimal temperature: <span id="optimal-temp">18</span>°C
+                        </div>
+                        <div class="user-temperature">
+                            Your temperature: <span id="user-temp">20</span>°C
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="appliances">
+                <h2 class="device-name">Appliances</h2>
+                <img src="images/electric-appliance.png" alt="appliances">
+                <p class="status">Status: <span id="appliances-status">Turn off</span></p>
+                <div class="container-btn">
+                    <div class="toggle appliances-toogle">
+                        <div class="circle"></div>
+                    </div>
+                    <span class="text">OFF</span>
+                </div>
+            </div>
+
         </div>
     </div>
 
