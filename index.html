@@ -38,8 +38,12 @@
                             </div>
                             <span class="text">OFF</span>
                         </div>
-                        <input type="range" min="10" max="30" step="1" value="10" class="ac-temperature ac-temperature-input">
-                        <span class="text-conditioner"></span>
+                        <div class="ac-controls ac-temperature ac-temperature-input">
+                            <button id="decrease-temp">-</button>
+                            <input type="number" id="ac-temp" value="15" min="10" max="30" step="1">
+                            <!-- <span class="text-conditioner" type="number" id="ac-temp" value="20"></span> -->
+                            <button id="increase-temp">+</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,7 +72,8 @@
                             </div>
                             <span class="text">OFF</span>
                         </div>
-                        <input type="range" min="0" max="100" step="1" value="2" class="sound-system-volume sound-system-input">
+                        <input type="range" min="0" max="100" step="1" value="2"
+                            class="sound-system-volume sound-system-input">
                         <span class="text-sound"></span>
                     </div>
                 </div>
@@ -98,8 +103,9 @@
                             </div>
                             <span class="text">OFF</span>
                         </div>
-                            <input type="range" min="0" max="50" step="1" value="0" class="jalousie-system jalousie-system-input">
-                            <span class="text-jalousie"></span>
+                        <input type="range" min="0" max="50" step="1" value="0"
+                            class="jalousie-system jalousie-system-input">
+                        <span class="text-jalousie"></span>
                     </div>
                 </div>
             </div>

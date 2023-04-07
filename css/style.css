@@ -19,13 +19,26 @@ body {
 .user-temperature,
 .text-conditioner,
 .text-sound,
-.text-jalousie {
+.text-jalousie,
+#ac-temp,
+#decrease-temp,
+#increase-temp  {
     color: aliceblue;
 }
 
 .room-name,
-.device-name {
+.device-name,
+#ac-temp  {
     font-size: 16px;
+}
+
+#decrease-temp,
+#increase-temp {
+     font-size: 18px;
+     width: 20px;
+    text-align: center;
+    background-color:  rgba(32, 3, 56, 0.236);
+    border: none;
 }
 
 .text-sound {
@@ -93,7 +106,7 @@ body {
     cursor: pointer;
 }
 
-.ac-temperature,
+/* .ac-temperature, */
 .sound-system-volume,
 .jalousie-system {
     width: 70px;
@@ -105,6 +118,13 @@ body {
 .sound-system-volume,
 .jalousie-system {
     display: none;
+}
+
+#ac-temp {
+    width: 40px;
+    text-align: center;
+    background-color:  rgba(32, 3, 56, 0.236);
+    border: none;
 }
 
 #content {
@@ -177,9 +197,6 @@ body {
     transition: .3s;
     background-color: rgb(85, 227, 118);
 }
-
-
-
 
 @media (min-width: 768px) {
     .page {

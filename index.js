@@ -80,12 +80,31 @@ appliancesToogle.addEventListener('click', function () {
     toggle(document.querySelector('#appliances'));
 });
 
-// Air conditioner input
+// Air conditioner input temperature
 
-acTemperatureInput.addEventListener('input', () => {
-    const percent = ((acTemperatureInput.value - acTemperatureInput.min) / (acTemperatureInput.max - acTemperatureInput.min) * 100).toFixed(0);
-    textConditioner.textContent = `${percent}%`;
+const decreaseTempButton = document.getElementById('decrease-temp');
+const increaseTempButton = document.getElementById('increase-temp');
+const acTempInput = document.getElementById('ac-temp');
+
+decreaseTempButton.addEventListener('click', () => {
+    if (acTempInput.checkValidity()) {
+        acTempInput.stepDown();
+        updateTemperature();
+    }
 });
+
+increaseTempButton.addEventListener('click', () => {
+    if (acTempInput.checkValidity()) {
+        acTempInput.stepUp();
+        updateTemperature();
+    }
+});
+
+function updateTemperature() {
+    const acTemperature = acTempInput.value;
+    const acTemperatureText = `${acTemperature}°C`;
+    acTempInput.setAttribute('value', acTemperatureText);
+}
 
 // Sound system input
 
@@ -100,7 +119,10 @@ soundSystemInput.addEventListener('input', () => {
 });
 
 // Jalousie input
+
 jalousieInput.addEventListener('input', () => {
     const percent = ((jalousieInput.value - jalousieInput.min) / (jalousieInput.max - jalousieInput.min) * 100).toFixed(0);
     textJalousie.textContent = `${percent}%`;
 });
+
+
