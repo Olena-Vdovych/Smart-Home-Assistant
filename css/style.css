@@ -22,22 +22,22 @@ body {
 .text-jalousie,
 #ac-temp,
 #decrease-temp,
-#increase-temp  {
+#increase-temp {
     color: aliceblue;
 }
 
 .room-name,
 .device-name,
-#ac-temp  {
+#ac-temp {
     font-size: 16px;
 }
 
 #decrease-temp,
 #increase-temp {
-     font-size: 18px;
-     width: 20px;
+    font-size: 18px;
+    width: 20px;
     text-align: center;
-    background-color:  rgba(32, 3, 56, 0.236);
+    background-color: rgba(32, 3, 56, 0.236);
     border: none;
 }
 
@@ -106,7 +106,6 @@ body {
     cursor: pointer;
 }
 
-/* .ac-temperature, */
 .sound-system-volume,
 .jalousie-system {
     width: 70px;
@@ -123,7 +122,7 @@ body {
 #ac-temp {
     width: 40px;
     text-align: center;
-    background-color:  rgba(32, 3, 56, 0.236);
+    background-color: rgba(32, 3, 56, 0.236);
     border: none;
 }
 
@@ -155,6 +154,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .text {
     font-size: 13px;
     color: rgb(188, 28, 28);
@@ -179,7 +179,7 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 20px;
-    background-color:  rgba(188, 28, 28, 0.456);
+    background-color: rgba(188, 28, 28, 0.456);
     transition: .3s;
 }
 
@@ -187,7 +187,7 @@ body {
     border-color: rgb(85, 227, 118);
 }
 
-.active + .text {
+.active+.text {
     color: rgb(85, 227, 118);
 }
 
