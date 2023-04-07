@@ -75,10 +75,15 @@ jalousieToogle.addEventListener('click', function () {
     toggle(document.querySelector('#jalousie'));
 });
 securityToggle.addEventListener('click', function () {
+    let securityText = document.getElementById('security-status');
     toggle(document.querySelector('#security'));
+    securityText.innerHTML = document.querySelector('#security .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
+
 lightsToggle.addEventListener('click', function () {
+    let lightText = document.getElementById('lights-status');
     toggle(document.querySelector('#lights'));
+    lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
 appliancesToogle.addEventListener('click', function () {
     toggle(document.querySelector('#appliances'));
