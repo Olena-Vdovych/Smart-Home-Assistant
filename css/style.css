@@ -18,7 +18,8 @@ body {
 .optimal-temperature,
 .user-temperature,
 .text-conditioner,
-.text-sound {
+.text-sound,
+.text-jalousie {
     color: aliceblue;
 }
 
@@ -95,13 +96,14 @@ body {
 .ac-temperature,
 .sound-system-volume,
 .jalousie-system {
-    width: 80px;
+    width: 70px;
     margin-top: 10px;
     cursor: pointer;
 }
 
 .ac-temperature,
-.sound-system-volume {
+.sound-system-volume,
+.jalousie-system {
     display: none;
 }
 
@@ -175,6 +177,9 @@ body {
     transition: .3s;
     background-color: rgb(85, 227, 118);
 }
+
+
+
 
 @media (min-width: 768px) {
     .page {
