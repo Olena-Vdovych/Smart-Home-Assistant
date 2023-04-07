@@ -49,3 +49,14 @@ lightsToggle.addEventListener('click', function () {
 appliancesToogle.addEventListener('click', function () {
     toggle(document.querySelector('#appliances'));
 });
+
+
+// Air conditioner input
+const acTemperatureInput = document.querySelector('.ac-temperature');
+const conditionerToggle = document.querySelector('.conditioner-toggle');
+const text = document.querySelector('.text-conditioner');
+
+acTemperatureInput.addEventListener('input', () => {
+    const percent = ((acTemperatureInput.value - acTemperatureInput.min) / (acTemperatureInput.max - acTemperatureInput.min) * 100).toFixed(0);
+    text.textContent = `${percent}%`;
+});

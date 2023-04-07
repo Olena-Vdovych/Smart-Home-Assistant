@@ -16,7 +16,8 @@ body {
 .device-name,
 .status,
 .optimal-temperature,
-.user-temperature {
+.user-temperature,
+.text-conditioner {
     color: aliceblue;
 }
 
