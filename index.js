@@ -33,9 +33,11 @@ function toggle(element) {
         }
         if (soundSystemInput) {
             soundSystemInput.style.display = 'block';
+            textSoundSystem.style.display = 'block';
         }
         if (jalousieInput) {
             jalousieInput.style.display = 'block';
+            textJalousie.style.display = 'block';
         }
     } else {
         toggle.classList.remove('active');
@@ -45,9 +47,11 @@ function toggle(element) {
         }
         if (soundSystemInput) {
             soundSystemInput.style.display = 'none';
+            textSoundSystem.style.display = 'none';
         }
         if (jalousieInput) {
             jalousieInput.style.display = 'none';
+            textJalousie.style.display = 'none';
         }
     }
 }
