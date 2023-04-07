@@ -17,13 +17,18 @@ body {
 .status,
 .optimal-temperature,
 .user-temperature,
-.text-conditioner {
+.text-conditioner,
+.text-sound {
     color: aliceblue;
 }
 
 .room-name,
 .device-name {
     font-size: 16px;
+}
+
+.text-sound {
+    font-size: 11px;
 }
 
 #rooms {
