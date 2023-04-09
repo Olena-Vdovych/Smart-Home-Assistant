@@ -273,6 +273,7 @@ body {
 .line_active {
     stroke: rgba(246, 33, 9, 0.871);
     stroke-dasharray: 100 276; /* from 54 to 276 */
+    transition: all 0.5s ease-in-out;
 }
 
 .round {
