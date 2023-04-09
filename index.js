@@ -5,7 +5,7 @@ const soundToggle = document.querySelector('.sound-toggle');
 const cookerToogle = document.querySelector('.cooker-toogle');
 const securityToggle = document.querySelector('.security-toggle');
 const lightsToggle = document.querySelector('.lights-toggle');
-const appliancesToogle = document.querySelector('.appliances-toogle');
+const appliancesToggle = document.querySelector('.appliances-toogle');
 const acTemperatureInput = document.querySelector('.ac-temperature');
 const conditionerToggle = document.querySelector('.conditioner-toggle');
 const textConditioner = document.querySelector('.text-conditioner');
@@ -85,8 +85,10 @@ lightsToggle.addEventListener('click', function () {
     toggle(document.querySelector('#lights'));
     lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
-appliancesToogle.addEventListener('click', function () {
+appliancesToggle.addEventListener('click', function () {
+    let appliancesText = document.getElementById('appliances-status');
     toggle(document.querySelector('#appliances'));
+    appliancesText.innerHTML = document.querySelector('#appliances .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
 
 // Air conditioner input temperature
@@ -133,5 +135,3 @@ jalousieInput.addEventListener('input', () => {
     const percent = ((jalousieInput.value - jalousieInput.min) / (jalousieInput.max - jalousieInput.min) * 100).toFixed(0);
     textJalousie.textContent = `${percent}%`;
 });
-
-
