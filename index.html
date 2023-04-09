@@ -137,21 +137,24 @@
             <div id="thermostat">
                 <h2 class="device-name">Thermoregulation</h2>
                 <img src="images/temperature.png" alt="temperature">
-                <div class="thermostat">
-                    <div class="dial"></div>
-                    <div class="temperature-display">
-                        <div class="optimal-temperature">
-                            Optimal temperature: <span id="optimal-temp">18</span>°C
-                        </div>
-                        <div class="user-temperature">
-                            Your temperature: <span id="user-temp">20</span>°C
-                        </div>
+                <div class="temperature-button">
+                    <svg class="dots-box" width="100" height="100" viewBox="0 0 103 103">
+                        <circle class="dots" r="50" cx="50%" cy="50%"></circle>
+                        <circle class="line" r="44" cx="50%" cy="50%"></circle>
+                        <circle class="line_active" r="44" cx="50%" cy="50%"></circle>
+                        <circle class="seperate-lines" r="44" cx="50%" cy="50%"></circle>
+                        <circle class="round" r="44" cx="50%" cy="50%"></circle>
+                        <circle class="seperate-dots" r="50" cx="50%" cy="50%"></circle>
+                    </svg>
+                    <div class="temperature-button_info">
+                        <span>22</span>
+                        <span>&degC</span>
                     </div>
                 </div>
             </div>
 
             <div id="appliances">
-                <h2 class="device-name">Appliances</h2>
+                <h2 class="device-name">Appliances All</h2>
                 <img src="images/electric-appliance.png" alt="appliances">
                 <span class="status">Status: <span id="appliances-status">Turn off</span></span>
                 <div class="container-btn">
@@ -162,17 +165,6 @@
                 </div>
             </div>
 
-            <!-- <div id="appliances">
-                <h2 class="device-name">Appliances</h2>
-                <img src="images/electric-appliance.png" alt="appliances">
-                <span class="status">Status: <span id="appliances-status">Turn off</span></span>
-                <div class="container-btn">
-                    <div class="toggle appliances-toogle">
-                        <div class="circle"></div>
-                    </div>
-                    <span class="text">OFF</span>
-                </div>
-            </div> -->
         </div>
     </div>
 

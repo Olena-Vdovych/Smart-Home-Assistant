@@ -22,7 +22,8 @@ body {
 .text-jalousie,
 #ac-temp,
 #decrease-temp,
-#increase-temp {
+#increase-temp,
+.temperature-button_info {
     color: aliceblue;
 }
 
@@ -130,6 +131,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(32, 3, 56, 0.236);
+    border: 1px solid rgba(0, 0, 0, 0.421);
 }
 
 #security,
@@ -198,6 +201,102 @@ body {
     background-color: rgb(85, 227, 118);
 }
 
+.temperature-button {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: grid;
+}
+
+.dots-box {
+    cursor: pointer;
+    transform: rotate(5deg);
+    transform-origin: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.temperature-button_info {
+    font-size: 17px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0);
+    box-shadow: 0 0 10px rgb(232, 216, 216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperature-button_info::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+    border-radius: 100%;
+    border: 1px solid rgb(248, 243, 243);
+    opacity: 0.6;
+}
+
+.dots,
+.line,
+.line_active,
+.round,
+.seperate-lines,
+.seperate-dots {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray: 0 21;
+    transition: all 0.5s ease-in-out;
+}
+
+.line,
+.line_active,
+.round {
+    stroke-width: 1px;
+    stroke-dasharray: 276 276;
+    transform: rotate(48deg);
+    transform-origin: center;
+}
+
+.line_active {
+    stroke: rgba(246, 33, 9, 0.871);
+    stroke-dasharray: 100 276; /* from 54 to 276 */
+}
+
+.round {
+    stroke-width: 6px;
+    stroke-dasharray: 0 276;
+    transform: rotate(-240deg); /* from -240 to 48 degrees */
+}
+
+.seperate-lines,
+.seperate-dots {
+    stroke: rgba(84, 185, 50, 0.93);
+    transform: rotate(60deg);
+    transform-origin: center;
+}
+
+.seperate-dots {
+    stroke-dasharray: 40 313;
+}
+
+.seperate-lines {
+    stroke-dasharray: 53 276;
+    transform: rotate(49deg);
+}
+
 @media (min-width: 768px) {
     .page {
         flex-direction: row;
@@ -206,5 +305,6 @@ body {
 
     #content {
         margin-right: 50px;
+        width: 50%;
     }
 }
