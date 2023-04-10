@@ -1,0 +1,27 @@
+// Changed TV channels and volume
+const tvContainer = document.getElementById('tv-container');
+const volumeUpBtn = document.getElementById('volume-up');
+const volumeDownBtn = document.getElementById('volume-down');
+const volumeBar = document.getElementById('volume-bar');
+
+let volumeLevel = 50;
+
+volumeUpBtn.addEventListener('click', () => {
+    if (volumeLevel < 100) {
+        volumeLevel += 10;
+        volumeBar.style.width = volumeLevel + '%';
+    }
+});
+
+volumeDownBtn.addEventListener('click', () => {
+    if (volumeLevel > 0) {
+        volumeLevel -= 10;
+        volumeBar.style.width = volumeLevel + '%';
+    }
+});
+
+const channelSelect = document.getElementById('channel-select');
+
+channelSelect.addEventListener('change', () => {
+    const selectedChannel = channelSelect.value;
+});
