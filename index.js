@@ -157,7 +157,7 @@ function renderTermoregulation(temp) {
     const roundRange = roundMax - roundMin;
     const roundPercent = roundRange / 100;
 
-    const finishPercent = Math.round((temp - min) / percent); 
+    const finishPercent = Math.round((temp - min) / percent);
     const lineFinishPercent = lineMin + linePercent * finishPercent;
     const roundFinishPercent = roundMin + roundPercent * finishPercent;
 
@@ -166,5 +166,48 @@ function renderTermoregulation(temp) {
     temperature.textContent = temp;
 }
 
-renderTermoregulation(22);
+renderTermoregulation(16);
+
+// Change the temperature with the mouse
+
+const temperatureBtn = document.getElementById('temperature-btn');
+
+function changeTemperature() {
+    let mouseOver = false;
+    let mouseDown = false;
+    let position = 0;
+    let range = 0;
+    let change = 0;
+
+    temperatureBtn.onmouseover = () => mouseOver = true;
+    temperatureBtn.onmouseleave = () => mouseOver = false;
+    temperatureBtn.onmouseup = () => mouseDown = false;
+    temperatureBtn.onmousedown = (e) => {
+        mouseDown = true;
+        position = e.offsetY;
+        range = 0;
+    }
+    temperatureBtn.onmousemove = (e) => {
+        if (mouseOver && mouseDown) {
+            range = e.offsetY - position;
+            const newChange = Math.round(range / -50);
+            if (newChange != change) {
+                let temperature = document.getElementById('temperature');
+                let temperatureValue = parseInt(temperature.innerText);
+
+                if (newChange < change) {
+                    temperature.textContent = temperatureValue - 1;
+                } else {
+                    temperature.textContent = temperatureValue + 1;
+                    console.log(temperature.textContent, change);
+                }
+                
+                renderTermoregulation(temperatureValue + change);
+                change = newChange;
+            }
+        }
+    }
+}
+
+changeTemperature();
 

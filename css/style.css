@@ -277,7 +277,7 @@ body {
 }
 
 .round {
-    stroke-width: 6px;
+    stroke-width: 16px;
     stroke-dasharray: 0 276;
     transform: rotate(-240deg); /* from -240 to 48 degrees */
 }
