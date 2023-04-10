@@ -1,20 +1,3 @@
-const lightToggle = document.querySelector('.light-toggle');
-const conditionerToogle = document.querySelector('.conditioner-toggle');
-const soundToggle = document.querySelector('.sound-toggle');
-const cookerToogle = document.querySelector('.cooker-toogle');
-const securityToggle = document.querySelector('.security-toggle');
-const lightsToggle = document.querySelector('.lights-toggle');
-const appliancesToggle = document.querySelector('.appliances-toogle');
-const acTemperatureInput = document.querySelector('.ac-temperature');
-const conditionerToggle = document.querySelector('.conditioner-toggle');
-const textConditioner = document.querySelector('.text-conditioner');
-const soundSystemInput = document.querySelector('.sound-system-volume');
-const soundSystemToggle = document.querySelector('.sound-toggle');
-const textSoundSystem = document.querySelector('.text-sound');
-const jalousieInput = document.querySelector('.jalousie-system');
-const jalousieToogle = document.querySelector('.jalousie-toggle');
-const textJalousie = document.querySelector('.text-jalousie');
-
 let active = false;
 
 function toggle(element) {
@@ -55,9 +38,12 @@ function toggle(element) {
     }
 }
 
+const lightToggle = document.querySelector('.light-toggle');
 lightToggle.addEventListener('click', function () {
     toggle(document.querySelector('#light'));
 });
+// const conditionerToggle = document.querySelector('.conditioner-toggle');
+const conditionerToogle = document.querySelector('.conditioner-toggle');
 conditionerToogle.addEventListener('click', function () {
     toggle(document.querySelector('#ac'));
 });
@@ -66,7 +52,6 @@ const tvToggle = document.querySelector('.tv-toggle');
 const closeTvBtn = document.getElementById('close-tv');
 const tv = document.querySelector('#tv');
 const myTvContainer = document.getElementById('tv-container');
-
 tvToggle.addEventListener('click', function () {
     if (tv.classList.contains('on')) {
         tv.classList.remove('on');
@@ -75,31 +60,40 @@ tvToggle.addEventListener('click', function () {
     }
     myTvContainer.style.display = 'block';
 });
-
 closeTvBtn.addEventListener('click', () => {
     myTvContainer.style.display = 'none';
 });
 
+const soundToggle = document.querySelector('.sound-toggle');
 soundToggle.addEventListener('click', function () {
     toggle(document.querySelector('#sound-system'));
 });
+
+const cookerToogle = document.querySelector('.cooker-toogle');
 cookerToogle.addEventListener('click', function () {
     toggle(document.querySelector('#cooker'));
 });
+
+const jalousieToogle = document.querySelector('.jalousie-toggle');
 jalousieToogle.addEventListener('click', function () {
     toggle(document.querySelector('#jalousie'));
 });
+
+const securityToggle = document.querySelector('.security-toggle');
 securityToggle.addEventListener('click', function () {
     let securityText = document.getElementById('security-status');
     toggle(document.querySelector('#security'));
     securityText.innerHTML = document.querySelector('#security .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
 
+const lightsToggle = document.querySelector('.lights-toggle');
 lightsToggle.addEventListener('click', function () {
     let lightText = document.getElementById('lights-status');
     toggle(document.querySelector('#lights'));
     lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
+
+const appliancesToggle = document.querySelector('.appliances-toogle');
 appliancesToggle.addEventListener('click', function () {
     let appliancesText = document.getElementById('appliances-status');
     toggle(document.querySelector('#appliances'));
@@ -111,6 +105,8 @@ appliancesToggle.addEventListener('click', function () {
 const decreaseTempButton = document.getElementById('decrease-temp');
 const increaseTempButton = document.getElementById('increase-temp');
 const acTempInput = document.getElementById('ac-temp');
+const acTemperatureInput = document.querySelector('.ac-temperature');
+// const textConditioner = document.querySelector('.text-conditioner');
 
 decreaseTempButton.addEventListener('click', () => {
     if (acTempInput.checkValidity()) {
@@ -133,8 +129,12 @@ function updateTemperature() {
 }
 
 // Sound system input
+const soundSystemInput = document.querySelector('.sound-system-volume');
+const soundSystemToggle = document.querySelector('.sound-toggle');
+const textSoundSystem = document.querySelector('.text-sound');
 
 let previousVolume = 50;
+
 soundSystemInput.addEventListener('input', () => {
     const newVolume = parseInt(soundSystemInput.value, 10);
     const volumeDifference = newVolume - previousVolume;
@@ -145,7 +145,8 @@ soundSystemInput.addEventListener('input', () => {
 });
 
 // Jalousie input
-
+const jalousieInput = document.querySelector('.jalousie-system');
+const textJalousie = document.querySelector('.text-jalousie');
 jalousieInput.addEventListener('input', () => {
     const percent = ((jalousieInput.value - jalousieInput.min) / (jalousieInput.max - jalousieInput.min) * 100).toFixed(0);
     textJalousie.textContent = `${percent}%`;
