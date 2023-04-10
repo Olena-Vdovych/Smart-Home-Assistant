@@ -1,6 +1,5 @@
 const lightToggle = document.querySelector('.light-toggle');
 const conditionerToogle = document.querySelector('.conditioner-toggle');
-const tvToggle = document.querySelector('.tv-toggle');
 const soundToggle = document.querySelector('.sound-toggle');
 const cookerToogle = document.querySelector('.cooker-toogle');
 const securityToggle = document.querySelector('.security-toggle');
@@ -62,9 +61,25 @@ lightToggle.addEventListener('click', function () {
 conditionerToogle.addEventListener('click', function () {
     toggle(document.querySelector('#ac'));
 });
+
+const tvToggle = document.querySelector('.tv-toggle');
+const closeTvBtn = document.getElementById('close-tv');
+const tv = document.querySelector('#tv');
+const myTvContainer = document.getElementById('tv-container');
+
 tvToggle.addEventListener('click', function () {
-    toggle(document.querySelector('#tv'));
+    if (tv.classList.contains('on')) {
+        tv.classList.remove('on');
+    } else {
+        tv.classList.add('on');
+    }
+    myTvContainer.style.display = 'block';
 });
+
+closeTvBtn.addEventListener('click', () => {
+    myTvContainer.style.display = 'none';
+});
+
 soundToggle.addEventListener('click', function () {
     toggle(document.querySelector('#sound-system'));
 });
@@ -216,6 +231,7 @@ const tvContainer = document.getElementById('tv-container');
 const volumeUpBtn = document.getElementById('volume-up');
 const volumeDownBtn = document.getElementById('volume-down');
 const volumeBar = document.getElementById('volume-bar');
+
 let volumeLevel = 50;
 
 volumeUpBtn.addEventListener('click', () => {
@@ -237,3 +253,5 @@ const channelSelect = document.getElementById('channel-select');
 channelSelect.addEventListener('change', () => {
     const selectedChannel = channelSelect.value;
 });
+
+
