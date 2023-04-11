@@ -38,9 +38,13 @@ function toggle(element) {
     }
 }
 
-const lightToggle = document.querySelector('.light-toggle');
-lightToggle.addEventListener('click', function () {
-    toggle(document.querySelector('#light'));
+// const lightToggle = document.querySelector('.light-toggle');
+// lightToggle.addEventListener('click', function () {
+//     toggle(document.querySelector('#light'));
+// });
+const bedroomLightToggle = document.querySelector('.bedroom-light_toggle');
+bedroomLightToggle.addEventListener('click', function () {
+    toggle(document.querySelector('#bedroom-light'));
 });
 
 const conditionerToogle = document.querySelector('.conditioner-toggle');
@@ -69,6 +73,11 @@ soundToggle.addEventListener('click', function () {
     toggle(document.querySelector('#sound-system'));
 });
 
+const livingRoomLightToggle = document.querySelector('.livingroom-light_toggle');
+livingRoomLightToggle.addEventListener('click', function () {
+    toggle(document.querySelector('#livingroom-light'));
+});
+
 const cookerToogle = document.querySelector('.cooker-toogle');
 cookerToogle.addEventListener('click', function () {
     toggle(document.querySelector('#cooker'));
@@ -77,6 +86,11 @@ cookerToogle.addEventListener('click', function () {
 const jalousieToogle = document.querySelector('.jalousie-toggle');
 jalousieToogle.addEventListener('click', function () {
     toggle(document.querySelector('#jalousie'));
+});
+
+const kitchenLightToggle = document.querySelector('.kitchen-light_toggle');
+kitchenLightToggle.addEventListener('click', function () {
+    toggle(document.querySelector('#kitchen-light'));
 });
 
 const securityToggle = document.querySelector('.security-toggle');

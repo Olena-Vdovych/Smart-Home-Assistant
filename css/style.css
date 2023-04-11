@@ -32,6 +32,7 @@ body {
 .device-name,
 #ac-temp {
     font-size: 16px;
+    text-align: center;
 }
 
 #decrease-temp,
