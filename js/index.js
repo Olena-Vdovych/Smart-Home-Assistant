@@ -1,6 +1,6 @@
 let active = false;
 
-function toggle(element) {
+function toggle(element, lightId) {
     let toggle = element.querySelector('.toggle');
     let text = element.querySelector('.text');
     let acTemperatureInput = element.querySelector('.ac-temperature-input');
@@ -21,6 +21,12 @@ function toggle(element) {
             jalousieInput.style.display = 'block';
             textJalousie.style.display = 'block';
         }
+        if (lightId) {
+            let light = document.querySelector('.lightId');
+            if (light) {
+                light.classList.add('on');
+            }
+        }
     } else {
         toggle.classList.remove('active');
         text.innerHTML = 'OFF';
@@ -35,13 +41,15 @@ function toggle(element) {
             jalousieInput.style.display = 'none';
             textJalousie.style.display = 'none';
         }
+        if (lightId) {
+            let light = document.querySelector('.lightId');
+            if (light) {
+                light.classList.remove('on');
+            }
+        }
     }
 }
 
-// const lightToggle = document.querySelector('.light-toggle');
-// lightToggle.addEventListener('click', function () {
-//     toggle(document.querySelector('#light'));
-// });
 const bedroomLightToggle = document.querySelector('.bedroom-light_toggle');
 bedroomLightToggle.addEventListener('click', function () {
     toggle(document.querySelector('#bedroom-light'));
@@ -103,7 +111,10 @@ securityToggle.addEventListener('click', function () {
 const lightsToggle = document.querySelector('.lights-toggle');
 lightsToggle.addEventListener('click', function () {
     let lightText = document.getElementById('lights-status');
-    toggle(document.querySelector('#lights'));
+    toggle(document.querySelector('#lights'), 'lights');
+    toggle(document.querySelector('#bedroom-light'), 'bedroom-light_toggle');
+    toggle(document.querySelector('#livingroom-light'), 'livingroom-light_toggle');
+    toggle(document.querySelector('#kitchen-light'), 'kitchen-light_toggle');
     lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
 
@@ -113,4 +124,3 @@ appliancesToggle.addEventListener('click', function () {
     toggle(document.querySelector('#appliances'));
     appliancesText.innerHTML = document.querySelector('#appliances .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
-
