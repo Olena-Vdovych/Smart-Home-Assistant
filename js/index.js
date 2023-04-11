@@ -55,8 +55,8 @@ bedroomLightToggle.addEventListener('click', function () {
     toggle(document.querySelector('#bedroom-light'));
 });
 
-const conditionerToogle = document.querySelector('.conditioner-toggle');
-conditionerToogle.addEventListener('click', function () {
+const conditionerToggle = document.querySelector('.conditioner-toggle');
+conditionerToggle.addEventListener('click', function () {
     toggle(document.querySelector('#ac'));
 });
 
@@ -86,13 +86,13 @@ livingRoomLightToggle.addEventListener('click', function () {
     toggle(document.querySelector('#livingroom-light'));
 });
 
-const cookerToogle = document.querySelector('.cooker-toogle');
-cookerToogle.addEventListener('click', function () {
+const cookerToggle = document.querySelector('.cooker-toggle');
+cookerToggle.addEventListener('click', function () {
     toggle(document.querySelector('#cooker'));
 });
 
-const jalousieToogle = document.querySelector('.jalousie-toggle');
-jalousieToogle.addEventListener('click', function () {
+const jalousieToggle = document.querySelector('.jalousie-toggle');
+jalousieToggle.addEventListener('click', function () {
     toggle(document.querySelector('#jalousie'));
 });
 
@@ -119,8 +119,54 @@ lightsToggle.addEventListener('click', function () {
 });
 
 const appliancesToggle = document.querySelector('.appliances-toogle');
+let appliancesActive = false;
+
 appliancesToggle.addEventListener('click', function () {
     let appliancesText = document.getElementById('appliances-status');
+    let securityText = document.getElementById('security-status');
+    let lightText = document.getElementById('lights-status');
+    let acTemperatureInput = document.querySelector('.ac-temperature-input');
+    let soundSystemInput = document.querySelector('.sound-system-input');
+    let jalousieInput = document.querySelector('.jalousie-system-input');
     toggle(document.querySelector('#appliances'));
     appliancesText.innerHTML = document.querySelector('#appliances .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
-});
+    securityText.innerHTML = document.querySelector('#security .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
+    lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
+
+    if (!appliancesActive) {
+        appliancesActive = true;
+        conditionerToggle.classList.add('active');
+        acTemperatureInput.style.display = 'block';
+        tvToggle.classList.add('active');
+        soundToggle.classList.add('active');
+        soundSystemInput.style.display = 'block';
+        textSoundSystem.style.display = 'block';
+        cookerToggle.classList.add('active');
+        jalousieToggle.classList.add('active');
+        jalousieInput.style.display = 'block';
+        textJalousie.style.display = 'block';
+        securityToggle.classList.add('active');
+        bedroomLightToggle.classList.add('active');
+        livingRoomLightToggle.classList.add('active');
+        kitchenLightToggle.classList.add('active');
+        lightsToggle.classList.add('active');
+    }
+    else {
+        appliancesActive = false;
+        conditionerToggle.classList.remove('active');
+        acTemperatureInput.style.display = 'none';
+        tvToggle.classList.remove('active');
+        soundToggle.classList.remove('active');
+        soundSystemInput.style.display = 'none';
+        textSoundSystem.style.display = 'none';
+        cookerToggle.classList.remove('active');
+        jalousieToggle.classList.remove('active');
+        jalousieInput.style.display = 'none';
+        textJalousie.style.display = 'none';
+        securityToggle.classList.remove('active');
+        bedroomLightToggle.classList.remove('active');
+        livingRoomLightToggle.classList.remove('active');
+        kitchenLightToggle.classList.remove('active');
+        lightsToggle.classList.remove('active');
+    }
+})
