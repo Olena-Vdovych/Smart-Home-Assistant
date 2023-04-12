@@ -13,7 +13,6 @@ function closeTvContainer() {
     tvContainer.style.display = "none";
 }
 
-
 // Changed TV channels and volume
 const tvContainer = document.getElementById('tv-container');
 const volumeUpBtn = document.getElementById('volume-up');
@@ -40,4 +39,6 @@ const channelSelect = document.getElementById('channel-select');
 
 channelSelect.addEventListener('change', () => {
     const selectedChannel = channelSelect.value;
+    let chanelText = document.querySelector('.chanel-text');
+    chanelText.innerHTML = `You are watching channel ${selectedChannel}`;
 });

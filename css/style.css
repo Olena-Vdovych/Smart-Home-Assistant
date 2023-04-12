@@ -24,7 +24,8 @@ body {
 #decrease-temp,
 #increase-temp,
 .temperature-button_info,
-.channel-select {
+.channel-select,
+.chanel-text {
     color: aliceblue;
 }
 
@@ -182,6 +183,10 @@ body {
     border-radius: 10px;
 }
 
+.chanel-text {
+    font-size: 12px;
+    text-align: center;
+}
 
 .sound-system-volume,
 .jalousie-system {

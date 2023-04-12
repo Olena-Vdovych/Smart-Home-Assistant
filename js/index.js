@@ -6,6 +6,8 @@ function toggle(element, lightId) {
     let acTemperatureInput = element.querySelector('.ac-temperature-input');
     let soundSystemInput = element.querySelector('.sound-system-input');
     let jalousieInput = element.querySelector('.jalousie-system-input');
+    let tvToggle = document.querySelector('.tv-toggle');
+    let chanelText = document.querySelector('.chanel-text');
     let active = toggleSwitch.classList.contains('active');
     if (!active) {
         toggleSwitch.classList.add('active');
@@ -46,6 +48,9 @@ function toggle(element, lightId) {
             if (light) {
                 light.classList.remove('on');
             }
+        }
+        if (tvToggle) {
+            chanelText.style.display = 'none';
         }
     }
     return toggleSwitch;
