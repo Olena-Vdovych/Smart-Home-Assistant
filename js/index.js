@@ -99,6 +99,7 @@ kitchenLightToggle.addEventListener('click', function () {
 });
 
 const securityToggle = document.querySelector('.security-toggle');
+const securityImage = document.querySelector('.security img');
 securityToggle.addEventListener('click', function () {
     let securityText = document.getElementById('security-status');
     toggle(document.querySelector('#security'));
@@ -169,4 +170,5 @@ appliancesToggle.addEventListener('click', function () {
         kitchenLightToggle.classList.remove('active');
         lightsToggle.classList.remove('active');
     }
-})
+});
+

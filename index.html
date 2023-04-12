@@ -11,6 +11,45 @@
 </head>
 
 <body>
+    <button class="menu-button">Menu</button>
+    <div class="menu">
+        <ul class="menu-ul">
+            <li><a href="#profile">User profile</a>
+                <div class="profile-settings">
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname">
+                    <button type="submit">Save</button>
+                </div>
+            </li>
+            <li><a href="#lighting">Lighting settings</a>
+                <div class="lighting-settings">
+                    <div class="add-lights">
+                        <label for="add-light"> Add light:
+                            <select name="lights-rooms" id="add-rooms">
+                                <option value="1">Bedroom</option>
+                                <option value="2">Living room</option>
+                                <option value="3">Kitchen</option>
+                            </select>
+                        </label>
+                        <button type="submit">Save</button>
+                    </div>
+                    <div class="delete-lights">
+                        <label for="delete-light"> Delete light:
+                            <select name="lights-rooms" id="delete-rooms">
+                                <option value="1">Bedroom</option>
+                                <option value="2">Living room</option>
+                                <option value="3">Kitchen</option>
+                            </select>
+                        </label>
+                        <button type="submit">Save</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
     <div class="page container">
         <div id="rooms">
             <div class="room" id="bedroom">
@@ -209,6 +248,7 @@
 
     <script src="https://kit.fontawesome.com/db47ece932.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/air-conditioner.js"></script>
     <script src="js/sound-system.js"></script>
     <script src="js/jalousie.js"></script>
