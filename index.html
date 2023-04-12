@@ -56,13 +56,13 @@
                         <div class="device-text"> Click to change channels
                             <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl" style="color: #b9c7df;"></i>
                         </div>
-                        <img src="images/smart-tv.png" alt="tv">
+                        <img src="images/smart-tv.png" alt="tv" onclick="openTvContainer()">
                         <div id="tv-device" class="device-name">TV</div>
                         <div id="tv-container">
                             <div class="tv-btn">
                                 <button id="volume-down">-</button>
                                 <button id="volume-up">+</button>
-                                <button id="close-tv">X</button>
+                                <button id="close-tv" onclick="closeTvContainer()">X</button>
                             </div>
                             <div id="volume-bar"></div>
                             <label for="channel-select" class="channel-select">Change chanel:</label>

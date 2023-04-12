@@ -1,3 +1,19 @@
+// Open TV container 
+function openTvContainer() {
+    let deviceText = document.querySelector('.device-text');
+    deviceText.style.display = 'none';
+    let tvContainer = document.getElementById("tv-container");
+    tvContainer.style.display = "block";
+}
+
+function closeTvContainer() {
+    let deviceText = document.querySelector('.device-text');
+    deviceText.style.display = 'block';
+    let tvContainer = document.getElementById("tv-container");
+    tvContainer.style.display = "none";
+}
+
+
 // Changed TV channels and volume
 const tvContainer = document.getElementById('tv-container');
 const volumeUpBtn = document.getElementById('volume-up');
