@@ -51,7 +51,6 @@ function toggle(element, lightId) {
     return toggleSwitch;
 }
 
-
 const bedroomLightToggle = document.querySelector('.bedroom-light_toggle');
 bedroomLightToggle.addEventListener('click', function () {
     toggle(document.querySelector('#bedroom-light'));
@@ -121,16 +120,18 @@ appliancesToggle.addEventListener('click', function () {
     let acTemperatureInput = document.querySelector('.ac-temperature-input');
     let soundSystemInput = document.querySelector('.sound-system-input');
     let jalousieInput = document.querySelector('.jalousie-system-input');
+    let deviceText = document.querySelector('.device-text');
     toggle(document.querySelector('#appliances'));
     appliancesText.innerHTML = document.querySelector('#appliances .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
-    securityText.innerHTML = document.querySelector('#security .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
-    lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
+    securityText.innerHTML = document.querySelector('#security .toggle').classList.contains('active') ? 'TURN OFF' : 'TURN ON';
+    lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN OFF' : 'TURN ON';
 
     if (!appliancesActive) {
         appliancesActive = true;
         conditionerToggle.classList.add('active');
         acTemperatureInput.style.display = 'block';
         tvToggle.classList.add('active');
+        deviceText.style.display = 'block';
         soundToggle.classList.add('active');
         soundSystemInput.style.display = 'block';
         textSoundSystem.style.display = 'block';
@@ -149,6 +150,7 @@ appliancesToggle.addEventListener('click', function () {
         conditionerToggle.classList.remove('active');
         acTemperatureInput.style.display = 'none';
         tvToggle.classList.remove('active');
+        deviceText.style.display = 'none';
         soundToggle.classList.remove('active');
         soundSystemInput.style.display = 'none';
         textSoundSystem.style.display = 'none';
