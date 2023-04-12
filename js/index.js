@@ -1,15 +1,14 @@
 let active = false;
 
 function toggle(element, lightId) {
-    let toggle = element.querySelector('.toggle');
+    let toggleSwitch = element.querySelector('.toggle');
     let text = element.querySelector('.text');
     let acTemperatureInput = element.querySelector('.ac-temperature-input');
     let soundSystemInput = element.querySelector('.sound-system-input');
     let jalousieInput = element.querySelector('.jalousie-system-input');
-    let deviceText = document.querySelector('.device-text');
-    let active = toggle.classList.contains('active');
+    let active = toggleSwitch.classList.contains('active');
     if (!active) {
-        toggle.classList.add('active');
+        toggleSwitch.classList.add('active');
         text.innerHTML = 'ON';
         if (acTemperatureInput) {
             acTemperatureInput.style.display = 'block';
@@ -28,11 +27,8 @@ function toggle(element, lightId) {
                 light.classList.add('on');
             }
         }
-        if (deviceText) {
-            deviceText.style.display = 'block';
-        }
     } else {
-        toggle.classList.remove('active');
+        toggleSwitch.classList.remove('active');
         text.innerHTML = 'OFF';
         if (acTemperatureInput) {
             acTemperatureInput.style.display = 'none';
@@ -51,11 +47,10 @@ function toggle(element, lightId) {
                 light.classList.remove('on');
             }
         }
-        if (deviceText) {
-            deviceText.style.display = 'none';
-        }
     }
+    return toggleSwitch;
 }
+
 
 const bedroomLightToggle = document.querySelector('.bedroom-light_toggle');
 bedroomLightToggle.addEventListener('click', function () {
@@ -69,7 +64,9 @@ conditionerToggle.addEventListener('click', function () {
 
 const tvToggle = document.querySelector('.tv-toggle');
 tvToggle.addEventListener('click', function () {
-    toggle(document.querySelector('#tv'));
+    let toggleSwitch = toggle(document.querySelector('#tv'));
+    let deviceText = document.querySelector('.device-text');
+    deviceText.style.display = toggleSwitch.classList.contains('active') ? 'block' : 'none';
 });
 
 const soundToggle = document.querySelector('.sound-toggle');
