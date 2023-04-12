@@ -115,7 +115,7 @@ lightsToggle.addEventListener('click', function () {
     lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN ON' : 'TURN OFF';
 });
 
-const appliancesToggle = document.querySelector('.appliances-toogle');
+const appliancesToggle = document.querySelector('.appliances-toggle');
 let appliancesActive = false;
 
 appliancesToggle.addEventListener('click', function () {
