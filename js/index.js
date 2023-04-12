@@ -6,6 +6,7 @@ function toggle(element, lightId) {
     let acTemperatureInput = element.querySelector('.ac-temperature-input');
     let soundSystemInput = element.querySelector('.sound-system-input');
     let jalousieInput = element.querySelector('.jalousie-system-input');
+    let deviceText = document.querySelector('.device-text');
     let active = toggle.classList.contains('active');
     if (!active) {
         toggle.classList.add('active');
@@ -27,6 +28,9 @@ function toggle(element, lightId) {
                 light.classList.add('on');
             }
         }
+        if (deviceText) {
+            deviceText.style.display = 'block';
+        }
     } else {
         toggle.classList.remove('active');
         text.innerHTML = 'OFF';
@@ -47,6 +51,9 @@ function toggle(element, lightId) {
                 light.classList.remove('on');
             }
         }
+        if (deviceText) {
+            deviceText.style.display = 'none';
+        }
     }
 }
 
@@ -61,19 +68,8 @@ conditionerToggle.addEventListener('click', function () {
 });
 
 const tvToggle = document.querySelector('.tv-toggle');
-const closeTvBtn = document.getElementById('close-tv');
-const tv = document.querySelector('#tv');
-const myTvContainer = document.getElementById('tv-container');
 tvToggle.addEventListener('click', function () {
-    if (tv.classList.contains('on')) {
-        tv.classList.remove('on');
-    } else {
-        tv.classList.add('on');
-    }
-    myTvContainer.style.display = 'block';
-});
-closeTvBtn.addEventListener('click', () => {
-    myTvContainer.style.display = 'none';
+    toggle(document.querySelector('#tv'));
 });
 
 const soundToggle = document.querySelector('.sound-toggle');

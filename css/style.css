@@ -106,12 +106,27 @@ body {
     width: 30px;
 }
 
+.device-text {
+    position: absolute;
+    top: -67px;
+    width: 100%;
+    display: none;
+    font-size: 10px;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+}
+
+.fa-bounce {
+    margin-top: 20px;
+}
+
 #tv {
     cursor: pointer;
 }
 
 #tv-container {
-    display: none; 
+    display: none;
     position: absolute;
     width: 200px;
     height: 150px;
@@ -337,14 +352,16 @@ body {
 
 .line_active {
     stroke: rgba(246, 33, 9, 0.871);
-    stroke-dasharray: 100 276;/* from 54 to 276 */
+    stroke-dasharray: 100 276;
+    /* from 54 to 276 */
     transition: all 0.5s ease-in-out;
 }
 
 .round {
     stroke-width: 16px;
     stroke-dasharray: 0 276;
-    transform: rotate(-240deg);/* from -240 to 48 degrees */
+    transform: rotate(-240deg);
+    /* from -240 to 48 degrees */
 }
 
 .seperate-lines,
