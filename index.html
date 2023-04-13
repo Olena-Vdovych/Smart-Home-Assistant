@@ -17,10 +17,10 @@
             <li><a href="#">User profile</a>
                 <div class="profile-settings">
                     <label for="user-name" id="name">Name</label>
-                    <input type="text" id="user-name" name="user-name">
+                    <input type="text" id="user-name" name="user-name" required>
                     <label for="user-surname" id="surname">Surname</label>
-                    <input type="text" id="user-surname" name="user-surname">
-                    <button type="submit">Save</button>
+                    <input type="text" id="user-surname" name="user-surname" required>
+                    <button type="submit" class="user-submit">Save</button>
                 </div>
             </li>
             <li>
@@ -34,7 +34,7 @@
                                 <option value="3">Kitchen</option>
                             </select>
                         </label>
-                        <button type="submit">Save</button>
+                        <button type="submit" class="light-submit">Save</button>
                     </div>
                     <div class="delete-lights">
                         <label for="delete-light-select" id="delete-light-label">Delete light:
@@ -51,7 +51,7 @@
 
         </ul>
     </div>
-
+    <div class="user-info"></div>
     <div class="page container">
         <div id="rooms">
             <div class="room" id="bedroom">
@@ -251,6 +251,7 @@
     <script src="https://kit.fontawesome.com/db47ece932.js" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/user-info.js"></script>
     <script src="js/air-conditioner.js"></script>
     <script src="js/sound-system.js"></script>
     <script src="js/jalousie.js"></script>
