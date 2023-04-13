@@ -24,29 +24,28 @@
                 </div>
             </li>
             <li>
-                <a href="#">Lighting settings</a>
-                <div class="lighting-settings">
-                    <div class="add-lights">
-                        <label for="add-light-select" id="add-light-label">Add light:
-                            <select name="lights-rooms" id="add-light-select">
-                                <option value="1">Bedroom</option>
-                                <option value="2">Living room</option>
-                                <option value="3">Kitchen</option>
-                            </select>
-                        </label>
-                        <button type="submit" class="light-submit">Save</button>
-                    </div>
-                    <div class="delete-lights">
-                        <label for="delete-light-select" id="delete-light-label">Delete light:
-                            <select name="lights-rooms" id="delete-light-select">
-                                <option value="1">Bedroom</option>
-                                <option value="2">Living room</option>
-                                <option value="3">Kitchen</option>
-                            </select>
-                        </label>
-                        <button type="submit">Save</button>
-                    </div>
-                </div>
+                <a href="#">Alarm clock settings</a>
+                <form id="alarm-form">
+                    <label for="room-select">Select a room:</label>
+                    <select id="room-select">
+                        <option value="bedroom">Bedroom</option>
+                        <option value="living-room">Living Room</option>
+                        <option value="kitchen">Kitchen</option>
+                    </select>
+
+                    <label for="time-input">Set alarm time:</label>
+                    <input id="time-input" type="time">
+
+                    <label for="melody-select">Select alarm melody:</label>
+                    <select id="melody-select">
+                        <option value="melody1.mp3">Melody 1</option>
+                        <option value="melody2.mp3">Melody 2</option>
+                        <option value="melody3.mp3">Melody 3</option>
+                    </select>
+
+                    <button type="submit" id="clock-submit">Set Alarm</button>
+                </form>
+
             </li>
 
         </ul>
@@ -85,6 +84,7 @@
                             <button id="increase-temp">+</button>
                         </div>
                     </div>
+                    <div id="bedroom-container"></div>
                 </div>
             </div>
             <div class="room" id="living-room">
@@ -252,6 +252,7 @@
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/user-info.js"></script>
+    <script src="js/alarm-clock.js"></script>
     <script src="js/air-conditioner.js"></script>
     <script src="js/sound-system.js"></script>
     <script src="js/jalousie.js"></script>
