@@ -25,14 +25,12 @@ body {
     position: fixed;
     top: 60px;
     left: 0;
-    width: 200px;
+    width: 170px;
     height: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
     border: 1px solid rgba(0, 0, 0, 0.421);
     border-radius: 10px;
     padding: 0 20px;
-    background-color: rgba(32, 3, 56, 0.236);
+    background-color: rgba(32, 3, 56, 0.801);
     z-index: 9999;
 }
 
@@ -50,8 +48,15 @@ li {
     list-style-type: none;
 }
 
-a {
-    text-decoration: none;
+.menu-titles {
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: 900;
+    padding-bottom: 8px;
+}
+
+label {
+    font-size: 15px;
 }
 
 .page {
@@ -64,11 +69,48 @@ a {
     font-size: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+#user-name,
+#user-surname {
+    width: 100px;
+    margin-bottom: 5px;
+    border-radius: 8px;
 }
 
 .error {
     border: 3px solid red;
+}
+
+#room-select,
+#time-input,
+#melody-select {
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+.user-submit,
+#clock-submit {
+    cursor: pointer;
+    background-color: #305665;
+    border-radius: 9px;
+    color: aliceblue;
+}
+
+#alarm-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#bedroom-container,
+#living-room-container,
+#kitchen-container {
+    color: #29a9ad;
+    font-size: 14px;
+    display: flex;
+    text-align: center;
 }
 
 .room-name,
@@ -86,7 +128,7 @@ a {
 .channel-select,
 .chanel-text,
 .menu-ul,
-a,
+.menu-titles,
 .menu-button {
     color: aliceblue;
 }
@@ -154,6 +196,7 @@ a,
 .devices {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .device {
@@ -458,4 +501,3 @@ a,
         margin-right: 70px;
     }
 }
-
