@@ -104,6 +104,11 @@ label {
     align-items: flex-start;
 }
 
+#audio-player {
+    width: 150px;
+    height: 23px;
+}
+
 #bedroom-container,
 #living-room-container,
 #kitchen-container {
