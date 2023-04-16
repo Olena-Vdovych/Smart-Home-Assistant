@@ -69,6 +69,37 @@ function changeTemperature() {
             }
         }
     }
+    // Add touch event listeners
+    temperatureBtn.addEventListener('touchstart', (e) => {
+        mouseDown = true;
+        position = e.touches[0].clientY;
+        range = 0;
+    });
+
+    temperatureBtn.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        if (mouseDown) {
+            range = e.touches[0].clientY - position;
+            const newChange = Math.round(range / -50);
+            if (newChange != change) {
+                let temperature = document.getElementById('temperature');
+                let temperatureValue = parseInt(temperature.innerText);
+
+                if (newChange < change) {
+                    temperature.textContent = temperatureValue - 1;
+                } else {
+                    temperature.textContent = temperatureValue + 1;
+                }
+
+                renderTermoregulation(temperatureValue + change);
+                change = newChange;
+            }
+        }
+    });
+
+    temperatureBtn.addEventListener('touchend', (e) => {
+        mouseDown = false;
+    });
 }
 
 changeTemperature();
