@@ -42,3 +42,14 @@ channelSelect.addEventListener('change', () => {
     let chanelText = document.querySelector('.chanel-text');
     chanelText.innerHTML = `You are watching channel ${selectedChannel}`;
 });
+
+// Update the text showing the currently selected channel whenever any button on the page is clicked
+
+const allButtons = document.querySelectorAll('button');
+allButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedChannel = channelSelect.value;
+        let chanelText = document.querySelector('.chanel-text');
+        chanelText.innerHTML = `You are watching channel ${selectedChannel}`;
+    });
+});
