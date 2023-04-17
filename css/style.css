@@ -13,7 +13,7 @@ body {
     left: 20px;
     z-index: 10000;
     font-size: 20px;
-    background-color: rgba(32, 3, 56, 0.801);
+    background-color: var(--btn-background);
     border: 3px solid rgba(0, 0, 0, 0.421);
     border-radius: 5px;
     cursor: pointer;
@@ -30,7 +30,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.421);
     border-radius: 10px;
     padding: 0 20px;
-    background-color: rgba(32, 3, 56, 0.801);
+    background-color: var(--btn-background);
     z-index: 9999;
 }
 
@@ -65,7 +65,7 @@ label {
 }
 
 .user-info {
-    color: #a0cfe1;
+    color: var(--info-color);
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -93,9 +93,10 @@ label {
 .user-submit,
 #clock-submit {
     cursor: pointer;
-    background-color: #305665;
+    background-color: var(--submit-color);
     border-radius: 9px;
-    color: aliceblue;
+    color: var(--text-color);
+    width: 70px;
 }
 
 #alarm-form {
@@ -105,14 +106,14 @@ label {
 }
 
 #audio-player {
-    width: 150px;
+    width: 140px;
     height: 23px;
 }
 
 #bedroom-container,
 #living-room-container,
 #kitchen-container {
-    color: #29a9ad;
+    color: var(--container-text-color);
     font-size: 14px;
     display: flex;
     text-align: center;
@@ -135,7 +136,7 @@ label {
 .menu-ul,
 .menu-titles,
 .menu-button {
-    color: aliceblue;
+    color: var(--text-color);
 }
 
 .room-name,
@@ -150,7 +151,7 @@ label {
     font-size: 18px;
     width: 20px;
     text-align: center;
-    background-color: rgba(32, 3, 56, 0.236);
+    background-color: var(--sensor-color);
     border: none;
 }
 
@@ -175,7 +176,7 @@ label {
     border-radius: 10px;
     padding: 10px;
     width: 220px;
-    background-color: rgba(32, 3, 56, 0.236);
+    background-color: var(--sensor-color);
 }
 
 .room:hover {
@@ -223,7 +224,7 @@ label {
     width: 100%;
     display: none;
     font-size: 10px;
-    color: white;
+    color: var(--text-color);
     flex-direction: column;
     text-align: center;
 }
@@ -244,14 +245,14 @@ label {
     border-radius: 5px;
     padding: 10px;
     margin-top: -20px;
-    background-color: rgba(96, 120, 129, 0.945);
+    background-color: var(--tv-channels);
     z-index: 10;
 }
 
 #volume-bar {
     width: 50%;
     height: 12px;
-    background-color: lightgrey;
+    background-color: var(--volume-bar);
     border-radius: 5px;
     margin-top: 5px;
     position: relative;
@@ -262,7 +263,7 @@ label {
     display: block;
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: var(--text-color);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -275,9 +276,9 @@ label {
 #close-tv {
     font-size: 15px;
     width: 20px;
-    background-color: lightgrey;
+    background-color: var(--volume-bar);
     border: none;
-    color: azure;
+    color: var(--tv-sensor-color);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -313,14 +314,14 @@ label {
 #ac-temp {
     width: 40px;
     text-align: center;
-    background-color: rgba(32, 3, 56, 0.236);
+    background-color: var(--sensor-color);
     border: none;
 }
 
 #content {
     display: flex;
     flex-direction: row;
-    background-color: rgba(32, 3, 56, 0.236);
+    background-color: var(--sensor-color);
     border: 1px solid rgba(0, 0, 0, 0.421);
     border-radius: 10px;
     align-content: center;
@@ -354,7 +355,7 @@ label {
 
 .text {
     font-size: 13px;
-    color: rgb(188, 28, 28);
+    color: var(--btn-off-text);
 }
 
 .toggle {
@@ -376,23 +377,23 @@ label {
     width: 20px;
     height: 20px;
     border-radius: 20px;
-    background-color: rgba(188, 28, 28, 0.456);
+    background-color: var(--circle-color);
     transition: .3s;
 }
 
 .active {
-    border-color: rgb(85, 227, 118);
+    border-color: var(--active-color);
 }
 
 .active+.text {
-    color: rgb(85, 227, 118);
+    color: var(--active-color);
 }
 
 .active .circle {
     left: 100%;
     transform: translateX(-100%);
     transition: .3s;
-    background-color: rgb(85, 227, 118);
+    background-color: var(--active-color);
 }
 
 .temperature-button {
@@ -421,7 +422,7 @@ label {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgba(240, 248, 255, 0);
+    background-color: var(--btn-info-bgcolor);
     box-shadow: 0 0 10px rgb(232, 216, 216);
     display: flex;
     align-items: center;
@@ -448,7 +449,7 @@ label {
 .seperate-lines,
 .seperate-dots {
     fill: transparent;
-    stroke: white;
+    stroke: var(--text-color);
     stroke-width: 3px;
     stroke-linecap: round;
     stroke-dasharray: 0 21;
@@ -465,7 +466,7 @@ label {
 }
 
 .line_active {
-    stroke: rgba(246, 33, 9, 0.871);
+    stroke: var(--stroke-color);
     stroke-dasharray: 100 276;
     /* from 54 to 276 */
     transition: all 0.5s ease-in-out;
@@ -480,7 +481,7 @@ label {
 
 .seperate-lines,
 .seperate-dots {
-    stroke: rgba(84, 185, 50, 0.93);
+    stroke: var(--seperate-color);
     transform: rotate(60deg);
     transform-origin: center;
 }

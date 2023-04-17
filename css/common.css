@@ -8,9 +8,24 @@
 
 :root {
     scroll-behavior: smooth;
+    --btn-background:  rgba(32, 3, 56, 0.801);
+    --info-color: rgb(160, 207, 225);
+    --submit-color: rgb(48, 86, 101);
+    --text-color: rgb(240, 248, 255);
+    --container-text-color:  rgb(41, 169, 173);
+    --sensor-color: rgba(32, 3, 56, 0.236);
+    --tv-channels: rgba(96, 120, 129, 0.945);
+    --tv-sensor-color: rgb(240, 255, 255);
+    --volume-bar: rgb(211, 211, 211);
+    --btn-off-text: rgb(188, 28, 28);
+    --circle-color: rgba(188, 28, 28, 0.456);
+    --active-color: rgb(85, 227, 118);
+    --btn-info-bgcolor: rgba(240, 248, 255, 0);
+    --stroke-color:  rgba(246, 33, 9, 0.871);
+    --seperate-color: rgba(84, 185, 50, 0.93);
 }
 
-container {
+.container {
     max-width: 1200px;
     margin: auto;
 }
