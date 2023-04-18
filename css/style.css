@@ -108,6 +108,7 @@ label {
 #audio-player {
     width: 140px;
     height: 23px;
+    margin-bottom: 5px;
 }
 
 #bedroom-container,
