@@ -132,6 +132,15 @@ appliancesToggle.addEventListener('click', function () {
     securityText.innerHTML = document.querySelector('#security .toggle').classList.contains('active') ? 'TURN OFF' : 'TURN ON';
     lightText.innerHTML = document.querySelector('#lights .toggle').classList.contains('active') ? 'TURN OFF' : 'TURN ON';
 
+    const offElements = document.querySelectorAll('.text');
+    for (let i = 0; i < offElements.length; i++) {
+        if (offElements[i].innerHTML === 'OFF') {
+            offElements[i].innerHTML = 'ON';
+        } else {
+            offElements[i].innerHTML = 'OFF';
+        }
+    }
+
     if (!appliancesActive) {
         appliancesActive = true;
         conditionerToggle.classList.add('active');
@@ -171,4 +180,3 @@ appliancesToggle.addEventListener('click', function () {
         lightsToggle.classList.remove('active');
     }
 });
-
