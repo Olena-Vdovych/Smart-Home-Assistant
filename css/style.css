@@ -281,6 +281,7 @@ label {
     color: var(--tv-sensor-color);
     border-radius: 50%;
     cursor: pointer;
+    justify-content: center;
 }
 
 .tv-btn {
