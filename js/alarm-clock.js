@@ -10,10 +10,17 @@ document.getElementById('clock-submit').addEventListener('click', function (e) {
 
     if (room === 'bedroom') {
         bedroomContainer.innerHTML = `Alarm clock at ${time}, alarm ${melody}`;
+
+        localStorage.setItem('bedroomAlarm', bedroomContainer.innerHTML);
     } else if (room === 'living-room') {
         livingRoomContainer.innerHTML = `Alarm clock at ${time}, alarm ${melody}`;
+
+        localStorage.setItem('livingRoomAlarm', livingRoomContainer.innerHTML);
     } else if (room === 'kitchen') {
         kitchenContainer.innerHTML = `Alarm clock at ${time}, alarm ${melody}`;
+
+        localStorage.setItem('kitchenAlarm', kitchenContainer.innerHTML);
     }
 });
+
 
